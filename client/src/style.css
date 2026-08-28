@@ -1,3 +1,41 @@
+body.skills-fullscreen .hero,
+body.skills-fullscreen .about,
+body.skills-fullscreen .experience,
+body.skills-fullscreen .projects,
+body.skills-fullscreen .certificate {
+	display: none;
+}
+
+body.skills-fullscreen .skill {
+	margin-top: 0;
+}
+
+body.skills-fullscreen .skill-container {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	max-height: none;
+	margin-left: 0;
+	overflow-y: auto;
+	z-index: 1000;
+	background: #ffffff;
+}
+
+body.skills-fullscreen .skill-header {
+	justify-content: flex-start;
+	gap: 15px;
+}
+
+body.skills-fullscreen .back-arrow {
+	display: inline-flex;
+}
+
+body.skills-fullscreen #viewAllSkillsBtn {
+	display: none;
+}
+
+/* Dark Mode*/
+
 body.dark-mode {
 	background-color: #121212;
 	color: #ffffff;
@@ -81,91 +119,16 @@ body.dark-mode .skill-frontend:hover {
 	border-color: #ffffff;
 }
 
-.toggle-switch {
-	display: flex;
-	margin: -120px 0 0 -90px;
+body.dark-mode.skills-fullscreen .skill-container {
+	background: #121212;
 }
 
-.switch {
-	width: 60px;
-	height: 34px;
-	position: relative;
-	display: inline-block;
+body.dark-mode #viewAllSkillsBtn:hover,
+body.dark-mode #viewAllCertsBtn:hover {
+	color: #007bff;
 }
 
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	transition: 0.4s;
-}
-
-.slider:before {
-	position: absolute;
-	content: '';
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	transition: 0.4s;
-	z-index: 1;
-	border-radius: 2px;
-}
-
-.slider i {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2; /* Places icons above the white box */
-	transition:
-		opacity 0.3s ease,
-		left 0.4s ease;
-	color: #333;
-	pointer-events: none;
-}
-
-.slider .ph-sun {
-	left: 10px;
-	opacity: 1;
-}
-
-.slider .ph-moon {
-	left: 36px;
-	opacity: 0;
-}
-
-input:checked + .slider {
-	background-color: #2196f3;
-}
-
-input:focus + .slider {
-	box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-	transform: translateX(26px);
-}
-
-/* Hide Sun Icon when checked */
-input:checked + .slider .ph-sun {
-	opacity: 0;
-}
-
-/* Show Moon Icon inside the white box when checked */
-input:checked + .slider .ph-moon {
-	opacity: 1;
-}
+/* Hero Section */
 
 .hero {
 	min-height: 40vh;
@@ -282,7 +245,93 @@ input:checked + .slider .ph-moon {
 	transform: translateY(-3px);
 }
 
-/* about */
+.toggle-switch {
+	display: flex;
+	margin: -120px 0 0 -90px;
+}
+
+.switch {
+	width: 60px;
+	height: 34px;
+	position: relative;
+	display: inline-block;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: 0.4s;
+	z-index: 1;
+	border-radius: 2px;
+}
+
+.slider i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2; /* Places icons above the white box */
+	transition:
+		opacity 0.3s ease,
+		left 0.4s ease;
+	color: #333;
+	pointer-events: none;
+}
+
+.slider .ph-sun {
+	left: 10px;
+	opacity: 1;
+}
+
+.slider .ph-moon {
+	left: 36px;
+	opacity: 0;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+/* Hide Sun Icon when checked */
+input:checked + .slider .ph-sun {
+	opacity: 0;
+}
+
+/* Show Moon Icon inside the white box when checked */
+input:checked + .slider .ph-moon {
+	opacity: 1;
+}
+
+/* About Section */
 
 .about {
 	font-family: 'Inter', sans-serif;
@@ -320,7 +369,8 @@ input:checked + .slider .ph-moon {
 	border-bottom: none;
 }
 
-/* experience */
+/* Experience Section */
+
 .experience {
 	font-family: 'Inter', sans-serif;
 	margin-top: -380px;
@@ -408,7 +458,7 @@ input:checked + .slider .ph-moon {
 	line-height: 1.5;
 }
 
-/* skills */
+/* Skills section */
 
 .skill {
 	font-family: 'Inter', sans-serif;
@@ -478,46 +528,6 @@ input:checked + .slider .ph-moon {
 	color: #007bff;
 }
 
-body.skills-fullscreen .hero,
-body.skills-fullscreen .about,
-body.skills-fullscreen .experience,
-body.skills-fullscreen .projects,
-body.skills-fullscreen .certificate {
-	display: none;
-}
-
-body.skills-fullscreen .skill {
-	margin-top: 0;
-}
-
-body.skills-fullscreen .skill-container {
-	position: fixed;
-	inset: 0;
-	width: 100%;
-	max-height: none;
-	margin-left: 0;
-	overflow-y: auto;
-	z-index: 1000;
-	background: #ffffff;
-}
-
-body.dark-mode.skills-fullscreen .skill-container {
-	background: #121212;
-}
-
-body.skills-fullscreen .skill-header {
-	justify-content: flex-start;
-	gap: 15px;
-}
-
-body.skills-fullscreen .back-arrow {
-	display: inline-flex;
-}
-
-body.skills-fullscreen #viewAllSkillsBtn {
-	display: none;
-}
-
 #viewAllSkillsBtn,
 #viewAllCertsBtn {
 	border: none;
@@ -529,11 +539,6 @@ body.skills-fullscreen #viewAllSkillsBtn {
 
 #viewAllSkillsBtn:hover,
 #viewAllCertsBtn:hover {
-	color: #007bff;
-}
-
-body.dark-mode #viewAllSkillsBtn:hover,
-body.dark-mode #viewAllCertsBtn:hover {
 	color: #007bff;
 }
 
@@ -556,7 +561,7 @@ body.dark-mode #viewAllCertsBtn:hover {
 	font-size: 17px;
 }
 
-/* projects */
+/* Projects section */
 
 .projects {
 	font-family: 'Inter', sans-serif;
@@ -632,7 +637,7 @@ body.dark-mode #viewAllCertsBtn:hover {
 	color: #2196f3;
 }
 
-/* certificate */
+/* Certificate Section */
 
 .certificate {
 	font-family: 'Inter', sans-serif;
@@ -689,8 +694,6 @@ body.dark-mode #viewAllCertsBtn:hover {
 	color: #777;
 	margin: 0;
 }
-
-/* Line between certificates */
 
 .certificate-list hr {
 	border: none;
