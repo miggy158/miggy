@@ -1,3 +1,4 @@
+
 const themeToggle = document.getElementById('theme-toggle');
 
 themeToggle.addEventListener('change', function (e) {
@@ -9,14 +10,21 @@ themeToggle.addEventListener('change', function (e) {
 });
 
 function toggleSkills() {
-	const skillsHidden = document.getElementById("skillsHidden");
-	const button = document.querySelector("#viewAllSkillsBtn");
+	const isFullscreen = document.body.classList.toggle("skills-fullscreen");
+	const hiddenSkills = document.querySelectorAll(".skills-hidden");
 
-	skillsHidden.classList.toggle("active");
+	hiddenSkills.forEach((el) => el.classList.toggle("active", isFullscreen));
 
-	if(skillsHidden.classList.contains("active")) {
-		button.innerHTML = "View Less";
-	} else {
-		button.innerHTML = "View All";
-	}
+	document.getElementById("viewAllLabel").textContent = isFullscreen
+		? "View Less"
+		: "View All";
+}
+
+function exitSkillsFullscreen() {
+	document.body.classList.remove("skills-fullscreen");
+
+	const hiddenSkills = document.querySelectorAll(".skills-hidden");
+
+	hiddenSkills.forEach((el) => el.classList.remove("active"));
+	document.getElementById("viewAllLabel").textContent = "View All";
 }

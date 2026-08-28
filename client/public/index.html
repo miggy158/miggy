@@ -149,9 +149,17 @@
 		<section class="skill">
 			<div class="skill-container">
 				<div class="skill-header">
+					<button
+						id="skillsBackBtn"
+						class="back-arrow"
+						onclick="exitSkillsFullscreen()"
+						aria-label="Back"
+					>
+						<i class="ph-light ph-arrow-left"></i>
+					</button>
 					<h1>Skills</h1>
 					<button id="viewAllSkillsBtn" onclick="toggleSkills()">
-						View All
+						<span id="viewAllLabel">View All</span>
 						<i
 							class="ph-light ph-caret-right"
 							style="margin-left: auto"
@@ -159,25 +167,52 @@
 					</button>
 				</div>
 				<div class="skills-preview">
+					<!-- Frontend -->
 					<h2>Frontend</h2>
 					<span class="skill-frontend">HTML5</span>
 					<span class="skill-frontend">CSS3</span>
 					<span class="skill-frontend">JavaScript</span>
 					<span class="skill-frontend">React</span>
 					<span class="skill-frontend">Next.js</span>
+
+					<!-- Hidden content of Frontend -->
+					<div class="skills-hidden" id="skillsHidden">
+						<span class="skill-frontend">Tailwind CSS</span>
+						<span class="skill-frontend">TypeScript</span>
+					</div>
+
+					<!-- Backend -->
 					<h2>Backend</h2>
 					<span class="skill-frontend">Node.js</span>
 					<span class="skill-frontend">Python</span>
 					<span class="skill-frontend">SQL</span>
+
+					<!-- Hidden content of Backend -->
+					<div class="skills-hidden" id="skillsHidden">
+						<span class="skill-frontend">PHP</span>
+					</div>
+
+					<!-- Developer Tools -->
 					<h2>Developer Tools</h2>
 					<span class="skill-frontend">Figma</span>
 					<span class="skill-frontend">Git</span>
 					<span class="skill-frontend">VS Code</span>
 					<span class="skill-frontend">GitHub</span>
 				</div>
+				
+				    <!-- Hidden content of Developer Tools -->
+				<div class="skills-hidden" id="skillsHidden">
+					<span class="skill-frontend">PHP</span>
+				</div>
+
+				<!-- Hidden content of AI & Machine Learning -->
 				<!-- Hidden content -->
 				<div class="skills-hidden" id="skillsHidden">
 					<h2>AI & Machine Learning</h2>
+					<span class="skill-frontend">OpenAI</span>
+					<span class="skill-frontend">AutoGPT</span>
+					<span class="skill-frontend">Claude Code</span>
+					<span class="skill-frontend">Codex</span>
 				</div>
 			</div>
 		</section>

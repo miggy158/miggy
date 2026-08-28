@@ -431,8 +431,9 @@ input:checked + .slider .ph-moon {
 
 .skill-header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	gap: 440px;
 }
 
 .skill-container h1 {
@@ -461,13 +462,69 @@ input:checked + .slider .ph-moon {
 	border-bottom: none;
 }
 
+.back-arrow {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 22px;
+	color: inherit;
+	padding: 0;
+	align-items: center;
+	transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+	color: #007bff;
+}
+
+body.skills-fullscreen .hero,
+body.skills-fullscreen .about,
+body.skills-fullscreen .experience,
+body.skills-fullscreen .projects,
+body.skills-fullscreen .certificate {
+	display: none;
+}
+
+body.skills-fullscreen .skill {
+	margin-top: 0;
+}
+
+body.skills-fullscreen .skill-container {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	max-height: none;
+	margin-left: 0;
+	overflow-y: auto;
+	z-index: 1000;
+	background: #ffffff;
+}
+
+body.dark-mode.skills-fullscreen .skill-container {
+	background: #121212;
+}
+
+body.skills-fullscreen .skill-header {
+	justify-content: flex-start;
+	gap: 15px;
+}
+
+body.skills-fullscreen .back-arrow {
+	display: inline-flex;
+}
+
+body.skills-fullscreen #viewAllSkillsBtn {
+	display: none;
+}
+
 #viewAllSkillsBtn,
 #viewAllCertsBtn {
 	border: none;
 	background: none;
 	cursor: pointer;
 	font-size: 12px;
-	transition: all 0.3s ease;
+	transition: color 0.3s ease;
 }
 
 #viewAllSkillsBtn:hover,
