@@ -114,13 +114,14 @@ body.dark-mode .box:hover {
 	background: #ffffff;
 }
 
-body.dark-mode .skill-frontend {
-	border-color: rgb(var(--g200, 233 233 233) / var(--tw-border-opacity, 1));
+body.dark-mode .skill-frontend:hover {
+	border-color: rgb(var(--g200, 233 233 233) / 1);
 }
 
-body.dark-mode .skill-item {
-	border-color: rgb(var(--g200, 233 233 233) / var(--tw-border-opacity, 1));
+body.dark-mode .skill-item:hover {
+	border-color: rgb(var(--g200, 233 233 233) / 1);
 }
+
 
 /* Hero Section */
 
