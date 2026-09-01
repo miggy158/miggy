@@ -122,6 +122,10 @@ body.dark-mode .skill-item:hover {
 	border-color: rgb(var(--g200, 233 233 233) / 1);
 }
 
+body.dark-mode #viewAllSkillsBtn:hover,
+body.dark-mode #viewAllCertsBtn:hover {
+	color: #007bff;
+}
 
 /* Hero Section */
 
@@ -491,7 +495,7 @@ input:checked + .slider .ph-moon {
 }
 
 .skills-preview h2 {
-	font-size: 17px;
+	font-size: 14px;
 }
 
 .back-arrow {
@@ -551,6 +555,13 @@ input:checked + .slider .ph-moon {
 	cursor: pointer;
 	font-size: 12px;
 	transition: color 0.3s ease;
+	text-decoration: none;
+	color:#000;
+}
+
+#viewAllSkillsBtn:hover,
+#viewAllCertsBtn:hover {
+    color: #007bff;
 }
 
 .skills-hidden {
