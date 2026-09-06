@@ -16,7 +16,7 @@ body.skills-fullscreen .skill-container {
 	width: 100%;
 	max-height: none;
 	margin-left: 370px;
-    margin-top: 70px;
+	margin-top: 70px;
 	overflow-y: auto;
 	z-index: 1000;
 	border: none;
@@ -25,8 +25,6 @@ body.skills-fullscreen .skill-container {
 body.skills-fullscreen .skill-header {
 	justify-content: flex-start;
 	gap: 15px;
-	
-	
 }
 
 body.skills-fullscreen .back-arrow {
@@ -124,6 +122,13 @@ body.dark-mode .skill-item:hover {
 body.dark-mode #viewAllSkillsBtn:hover,
 body.dark-mode #viewAllCertsBtn:hover {
 	color: #007bff;
+}
+
+body.dark-mode .about-icon,
+body.dark-mode .experience-icon,
+body.dark-mode .skills-icon,
+body.dark-mode .certification-icon {
+	filter: brightness(0) invert(1);
 }
 
 /* Hero Section */
@@ -349,8 +354,25 @@ input:checked + .slider .ph-moon {
 }
 
 .about-container h1 {
-	font-size: 19px;
+	font-size: 20px;
 	font-weight: 700;
+}
+
+.about-header {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	line-height: 1.7;
+	gap: 420px;
+	margin-left: auto;
+}
+
+.about-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+	filter: brightness(0) opacity(0.6);
 }
 
 .about-container p {
@@ -371,7 +393,7 @@ input:checked + .slider .ph-moon {
 
 .experience {
 	font-family: 'Inter', sans-serif;
-	margin-top: -380px;
+	margin-top: -408px;
 }
 
 .experience-container {
@@ -385,15 +407,32 @@ input:checked + .slider .ph-moon {
 	height: 500px;
 }
 
+.experience-header {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	line-height: 1.7;
+	gap: 420px;
+	margin-left: auto;
+}
+
 .experience-container:hover {
 	border-bottom: none;
 }
 
-.title-experience {
+.experience h1 {
 	font-size: 19px;
 	font-weight: 700;
 	margin-bottom: 8px;
 	margin-top: 20px;
+}
+
+.experience-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+	filter: brightness(0) opacity(0.6);
 }
 
 .experience-list {
@@ -460,7 +499,7 @@ input:checked + .slider .ph-moon {
 
 .skill {
 	font-family: 'Inter', sans-serif;
-	margin-top: -110px;
+	margin-top: -70px;
 }
 
 .skill-container {
@@ -488,13 +527,23 @@ input:checked + .slider .ph-moon {
 
 .skill-header {
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
-	gap: 440px;
+	margin: 0;
+	line-height: 1.7;
+	gap: 420px;
+	margin-left: auto;
 }
 
 .skills-preview h2 {
 	font-size: 14px;
+}
+
+.skills-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+	filter: brightness(0) opacity(0.6);
 }
 
 body.skills-fullscreen .skills-preview h2 {
@@ -515,7 +564,6 @@ body.skills-fullscreen .skills-preview h2 {
 	align-items: center;
 	transition: color 0.3s ease;
 	text-decoration: none;
-	margin-top: -25px;
 }
 
 .back-arrow:hover {
@@ -542,7 +590,8 @@ body.skills-fullscreen .skills-preview h2 {
 }
 
 body.skills-fullscreen .skill-header h1 {
-	margin-bottom: 40px;
+	margin: 0;
+	line-height: 4;
 }
 
 body.skills-fullscreen .skill-item {
@@ -594,10 +643,18 @@ body.skills-fullscreen .skill-item:hover {
 	box-sizing: border-box;
 }
 
+.project-header {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	line-height: 1.7;
+	margin-left: auto;
+}
+
 .project-container h1 {
 	font-size: 19px;
 	font-weight: 700;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .project-content {
@@ -613,7 +670,6 @@ body.skills-fullscreen .skill-item:hover {
 	border: 1px solid #e7e7e7;
 	transition: 0.3s ease;
 	box-sizing: border-box;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -659,7 +715,7 @@ body.skills-fullscreen .skill-item:hover {
 
 .certificate {
 	font-family: 'Inter', sans-serif;
-	margin-top: -550px;
+	margin-top: -600px;
 }
 
 .certificate-container {
@@ -683,13 +739,23 @@ body.skills-fullscreen .skill-item:hover {
 
 .certificate-header {
 	display: flex;
-	justify-content: space-between;
+	margin: 0;
 	align-items: center;
+	line-height: 1.7;
+	gap: 40px;
 }
 
 .certificate-container h1 {
 	font-size: 20px;
 	font-weight: 700;
+}
+
+.certification-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+	filter: brightness(0) opacity(0.6);
 }
 
 .certificate-list {
