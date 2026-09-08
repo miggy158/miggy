@@ -16,7 +16,6 @@ body.skills-fullscreen .skill-container {
 	width: 100%;
 	max-height: none;
 	margin-left: 370px;
-	margin-top: 70px;
 	overflow-y: auto;
 	z-index: 1000;
 	border: none;
@@ -25,14 +24,79 @@ body.skills-fullscreen .skill-container {
 body.skills-fullscreen .skill-header {
 	justify-content: flex-start;
 	gap: 15px;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 body.skills-fullscreen .back-arrow {
-	display: inline-flex;
+	display: flex;
+	margin-top: 30px;
+	
+}
+
+body.skills-fullscreen .skill-header h2 {
+	color: #555555;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
 }
 
 body.skills-fullscreen #viewAllSkillsBtn {
 	display: none;
+}
+
+/* Certificate Fullscreen */
+
+body.certs-fullscreen .hero,
+body.certs-fullscreen .about,
+body.certs-fullscreen .experience,
+body.certs-fullscreen .projects,
+body.certs-fullscreen .skill {
+	display: none;
+}
+
+body.certs-fullscreen .certificate {
+	margin-top: 0;
+}
+
+body.certs-fullscreen .certificate-container {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	max-height: none;
+	margin-left: 370px;
+	margin-top: 70px;
+	overflow-y: auto;
+	z-index: 1000;
+	border: none;
+}
+
+body.certs-fullscreen .certificate-header {
+	justify-content: flex-start;
+	gap: 15px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+body.certs-fullscreen .back-arrow {
+	display: flex;
+	margin-top: 30px;
+}
+
+body.certs-fullscreen .certificate-header h2 {
+	color: #555555;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+}
+
+body.certs-fullscreen #viewAllCertsBtn {
+	display: none;
+}
+
+body.certs-fullscreen .certificate-header h1 {
+	margin: 0;
+	line-height: 4;
 }
 
 /* Dark Mode*/
@@ -119,16 +183,15 @@ body.dark-mode .skill-item:hover {
 	border-color: rgb(var(--g200, 233 233 233) / 1);
 }
 
-body.dark-mode #viewAllSkillsBtn:hover,
-body.dark-mode #viewAllCertsBtn:hover {
-	color: #007bff;
-}
-
 body.dark-mode .about-icon,
 body.dark-mode .experience-icon,
 body.dark-mode .skills-icon,
 body.dark-mode .certification-icon {
 	filter: brightness(0) invert(1);
+}
+
+body.dark-mode .skill-header h2 {
+	color: #555555;
 }
 
 /* Hero Section */
@@ -334,16 +397,31 @@ input:checked + .slider .ph-moon {
 	opacity: 1;
 }
 
+/* Page Columns */
+
+.columns {
+	display: flex;
+	align-items: flex-start;
+}
+
+.col-left {
+	margin-top: -50px;
+	margin-left: 320px;
+}
+
+.col-right {
+	margin-top: -50px;
+	margin-left: 12px;
+}
+
 /* About Section */
 
 .about {
 	font-family: 'Inter', sans-serif;
-	margin-top: -50px;
 }
 
 .about-container {
 	width: 550px;
-	margin-left: 320px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -393,11 +471,9 @@ input:checked + .slider .ph-moon {
 
 .experience {
 	font-family: 'Inter', sans-serif;
-	margin-top: -408px;
 }
 
 .experience-container {
-	margin-left: 924px;
 	padding-left: 15px;
 	border-bottom: 1px solid #cbcbcb65;
 	border-top: 1px solid #cbcbcb65;
@@ -499,11 +575,10 @@ input:checked + .slider .ph-moon {
 
 .skill {
 	font-family: 'Inter', sans-serif;
-	margin-top: -70px;
+	margin-top: 20px;
 }
 
 .skill-container {
-	margin-left: 320px;
 	padding-left: 20px;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #cbcbcb65;
@@ -564,10 +639,7 @@ body.skills-fullscreen .skills-preview h2 {
 	align-items: center;
 	transition: color 0.3s ease;
 	text-decoration: none;
-}
-
-.back-arrow:hover {
-	color: #007bff;
+	gap: 10px;
 }
 
 .skill-item {
@@ -623,21 +695,15 @@ body.skills-fullscreen .skill-item:hover {
 	color: #000;
 }
 
-#viewAllSkillsBtn:hover,
-#viewAllCertsBtn:hover {
-	color: #007bff;
-}
-
 /* Projects  section */
 
 .projects {
 	font-family: 'Inter', sans-serif;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .project-container {
-	margin-left: 320px;
-	padding: 20px;
+	padding: 20px 10px 30px 10px;
 	border: 1px solid #e5e5e5;
 	width: 590px;
 	box-sizing: border-box;
@@ -715,11 +781,10 @@ body.skills-fullscreen .skill-item:hover {
 
 .certificate {
 	font-family: 'Inter', sans-serif;
-	margin-top: -600px;
+	margin-top: 20px;
 }
 
 .certificate-container {
-	margin-left: 924px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -783,4 +848,22 @@ body.skills-fullscreen .skill-item:hover {
 	border: none;
 	border-top: 1px solid #cbcbcb65;
 	margin: 0;
+}
+
+/* Certificate Fullscreen Responsive */
+
+@media (max-width: 800px) {
+	body.certs-fullscreen .certificate-container {
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+	body.certs-fullscreen .certificate-header h1 {
+		font-size: 17px;
+	}
+	body.certs-fullscreen .certificate-item h2 {
+		font-size: 13px;
+	}
+	body.certs-fullscreen .certificate-item p {
+		font-size: 11px;
+	}
 }
