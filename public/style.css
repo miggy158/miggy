@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body.skills-fullscreen .hero,
 body.skills-fullscreen .about,
 body.skills-fullscreen .experience,
@@ -44,7 +46,7 @@ body.dark-mode .certificate-item p {
 }
 
 body.dark-mode .role p {
-	color: #ffffff !important;
+	color: #ffffff;
 }
 
 body.dark-mode .btn-action {
@@ -97,7 +99,7 @@ body.dark-mode .box:hover {
 }
 
 body.dark-mode .skill-item:hover {
-	border-color: rgb(var(--g200, 233 233 233) / 1);
+	border-color: rgb(233, 233, 233);
 }
 
 body.dark-mode .about-icon,
@@ -118,6 +120,10 @@ body.dark-mode .skill-header h2 {
 	display: flex;
 	align-items: center;
 	background: #ffffff;
+}
+
+.hero-container {
+	padding-left: 300px;
 }
 
 .hero-container img {
@@ -159,6 +165,11 @@ body.dark-mode .skill-header h2 {
 .role {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
+}
+
+.role p {
+	font-size: 17px;
+	color: #555555;
 }
 
 .hero-actions {
@@ -353,7 +364,9 @@ input:checked + .slider .ph-moon {
 	font-weight: 700;
 }
 
-.about-header {
+.about-header,
+.experience-header,
+.skill-header {
 	display: flex;
 	align-items: center;
 	margin: 0;
@@ -400,15 +413,6 @@ input:checked + .slider .ph-moon {
 	height: 500px;
 }
 
-.experience-header {
-	display: flex;
-	align-items: center;
-	margin: 0;
-	line-height: 1.7;
-	gap: 420px;
-	margin-left: auto;
-}
-
 .experience-container:hover {
 	border-bottom: none;
 }
@@ -430,7 +434,6 @@ input:checked + .slider .ph-moon {
 
 .experience-list {
 	display: flex;
-	gap: 0px;
 	position: relative;
 }
 
@@ -588,15 +591,6 @@ body.skills-fullscreen #viewAllSkillsBtn {
 	border-bottom: none;
 }
 
-.skill-header {
-	display: flex;
-	align-items: center;
-	margin: 0;
-	line-height: 1.7;
-	gap: 420px;
-	margin-left: auto;
-}
-
 .skills-preview h2 {
 	font-size: 14px;
 }
@@ -631,7 +625,7 @@ body.skills-fullscreen #viewAllSkillsBtn {
 	display: inline-block;
 	font-size: 14px;
 	border: 1px solid transparent;
-	border-color: rgb(var(--g200, 233 233 233) / var(--tw-border-opacity, 1));
+	border-color: rgb(233, 233, 233);
 	border-radius: 0.375rem;
 	padding: 5px 10px 5px 10px;
 	margin: 0 6px 8px 10px;
@@ -854,10 +848,6 @@ body.certs-fullscreen .certificate-header p {
 	max-height: 400px;
 	overflow: hidden;
 	transition: max-height 0.4s ease;
-}
-
-.certificate-container.expanded {
-	max-height: 800px;
 }
 
 .certificate-header {
