@@ -6,45 +6,6 @@ body.skills-fullscreen .certificate {
 	display: none;
 }
 
-body.skills-fullscreen .skill {
-	margin-top: 0;
-}
-
-body.skills-fullscreen .skill-container {
-	position: fixed;
-	inset: 0;
-	width: 100%;
-	max-height: none;
-	margin-left: 370px;
-	overflow-y: auto;
-	z-index: 1000;
-	border: none;
-}
-
-body.skills-fullscreen .skill-header {
-	justify-content: flex-start;
-	gap: 15px;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-body.skills-fullscreen .back-arrow {
-	display: flex;
-	margin-top: 30px;
-	
-}
-
-body.skills-fullscreen .skill-header h2 {
-	color: #555555;
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 400;
-}
-
-body.skills-fullscreen #viewAllSkillsBtn {
-	display: none;
-}
-
 /* Certificate Fullscreen */
 
 body.certs-fullscreen .hero,
@@ -53,50 +14,6 @@ body.certs-fullscreen .experience,
 body.certs-fullscreen .projects,
 body.certs-fullscreen .skill {
 	display: none;
-}
-
-body.certs-fullscreen .certificate {
-	margin-top: 0;
-}
-
-body.certs-fullscreen .certificate-container {
-	position: fixed;
-	inset: 0;
-	width: 100%;
-	max-height: none;
-	margin-left: 370px;
-	margin-top: 70px;
-	overflow-y: auto;
-	z-index: 1000;
-	border: none;
-}
-
-body.certs-fullscreen .certificate-header {
-	justify-content: flex-start;
-	gap: 15px;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-body.certs-fullscreen .back-arrow {
-	display: flex;
-	margin-top: 30px;
-}
-
-body.certs-fullscreen .certificate-header h2 {
-	color: #555555;
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 400;
-}
-
-body.certs-fullscreen #viewAllCertsBtn {
-	display: none;
-}
-
-body.certs-fullscreen .certificate-header h1 {
-	margin: 0;
-	line-height: 4;
 }
 
 /* Dark Mode*/
@@ -571,7 +488,78 @@ input:checked + .slider .ph-moon {
 	line-height: 1.5;
 }
 
-/* Skills section */
+/* Skills section for fullscreen */
+
+body.skills-fullscreen .skill {
+	margin-top: 0;
+}
+
+body.skills-fullscreen .skill-container {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	max-height: none;
+	margin-left: 370px;
+	overflow-y: auto;
+	z-index: 1000;
+	border: none;
+}
+
+body.skills-fullscreen .skill-header {
+	justify-content: flex-start;
+	gap: 15px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+body.skills-fullscreen .back-arrow {
+	display: flex;
+	margin-top: 30px;
+}
+
+body.skills-fullscreen .skill-header h2 {
+	color: #555555;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+}
+
+body.skills-fullscreen .skill-header h1 {
+	margin: 0;
+	line-height: 1.5;
+}
+
+body.skills-fullscreen .skill-header p {
+	margin: 0;
+	color: #555555;
+	font-size: 15px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+body.skills-fullscreen .skills-preview h2 {
+	font-size: 17px;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+body.skills-fullscreen .skill-item {
+	font-size: 14px;
+	padding: 6px 12px;
+	margin: 0 8px 30px 12px;
+}
+
+body.skills-fullscreen .skill-item:hover {
+	background: #cbcbcb65;
+	border-color: #000;
+}
+
+body.skills-fullscreen #viewAllSkillsBtn {
+	display: none;
+}
+
+/* skills section for not fullscreen */
 
 .skill {
 	font-family: 'Inter', sans-serif;
@@ -621,13 +609,6 @@ input:checked + .slider .ph-moon {
 	filter: brightness(0) opacity(0.6);
 }
 
-body.skills-fullscreen .skills-preview h2 {
-	font-size: 17px;
-	font-weight: 600;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
 .back-arrow {
 	display: none;
 	background: none;
@@ -657,22 +638,6 @@ body.skills-fullscreen .skills-preview h2 {
 }
 
 .skill-item:hover {
-	background: #cbcbcb65;
-	border-color: #000;
-}
-
-body.skills-fullscreen .skill-header h1 {
-	margin: 0;
-	line-height: 4;
-}
-
-body.skills-fullscreen .skill-item {
-	font-size: 14px;
-	padding: 6px 12px;
-	margin: 0 8px 30px 12px;
-}
-
-body.skills-fullscreen .skill-item:hover {
 	background: #cbcbcb65;
 	border-color: #000;
 }
@@ -777,7 +742,100 @@ body.skills-fullscreen .skill-item:hover {
 	color: #2196f3;
 }
 
-/* Certificate Section */
+/* Certificate Section for fullscreen */
+
+body.certs-fullscreen .certificate {
+	font-family: 'Inter', sans-serif;
+}
+
+body.certs-fullscreen .certificate-container {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	max-height: none;
+	margin-left: 370px;
+	overflow-y: auto;
+
+	border: none;
+	box-sizing: border-box;
+}
+
+body.certs-fullscreen .certificate-header {
+	justify-content: flex-start;
+	gap: 15px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+body.certs-fullscreen .certificate-list {
+	display: grid;
+	grid-template-columns: repeat(2, 400px);
+	gap: 15px;
+}
+
+body.certs-fullscreen .certificate-item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 12px;
+	margin-bottom: 20px;
+}
+
+body.certs-fullscreen .certificate-item {
+	border: 1px solid #e7e7e7;
+	border-radius: 12px;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	flex-direction: column;
+	justify-content: space-between;
+	display: flex;
+	transition: 0.3s ease;
+	cursor: pointer;
+	
+}
+
+body.certs-fullscreen .certificate-item:hover {
+	transform: translateY(-3px);
+}
+
+body.certs-fullscreen .certificate-item h2 {
+	font-size: 15px;
+}
+
+body.certs-fullscreen .certificate-item p {
+	font-size: 12px;
+}
+
+body.certs-fullscreen .back-arrow {
+	display: flex;
+	margin-top: 30px;
+}
+
+body.certs-fullscreen .certificate-header h2 {
+	color: #555555;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+}
+
+body.certs-fullscreen #viewAllCertsBtn {
+	display: none;
+}
+
+body.certs-fullscreen .certificate-header h1 {
+	margin: 0;
+	line-height: 1.5;
+}
+
+body.certs-fullscreen .certificate-header p {
+	margin: 0;
+	color: #555555;
+	font-size: 15px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+/* Certificate Section for not fullscreen */
 
 .certificate {
 	font-family: 'Inter', sans-serif;
@@ -855,7 +913,6 @@ body.skills-fullscreen .skill-item:hover {
 @media (max-width: 800px) {
 	body.certs-fullscreen .certificate-container {
 		margin-left: 20px;
-		margin-top: 20px;
 	}
 	body.certs-fullscreen .certificate-header h1 {
 		font-size: 17px;
@@ -866,4 +923,61 @@ body.skills-fullscreen .skill-item:hover {
 	body.certs-fullscreen .certificate-item p {
 		font-size: 11px;
 	}
+}
+
+/* Certificate Modal */
+
+body.modal-open {
+	overflow: hidden;
+}
+
+.cert-modal-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+
+.cert-modal-overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.cert-modal-content {
+	position: relative;
+	max-width: 90vw;
+	max-height: 85vh;
+	transform: scale(0.9);
+	transition: transform 0.3s ease;
+}
+
+.cert-modal-overlay.active .cert-modal-content {
+	transform: scale(1);
+}
+
+.cert-modal-content img {
+	max-width: 100%;
+	max-height: 85vh;
+	object-fit: contain;
+	border-radius: 8px;
+	display: block;
+}
+
+.cert-modal-close {
+	position: absolute;
+	top: -40px;
+	right: 0;
+	background: none;
+	border: none;
+	color: #ffffff;
+	font-size: 2rem;
+	cursor: pointer;
+	line-height: 1;
+	padding: 0;
 }
