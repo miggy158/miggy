@@ -16,3 +16,43 @@ if (themeToggle) {
 		}
 	});
 }
+
+const certModal = document.getElementById('certModal');
+const certModalImg = document.getElementById('certModalImg');
+const certModalClose = document.getElementById('certModalClose');
+
+if (certModal) {
+	function openCertModal(src) {
+		certModalImg.src = src;
+		certModal.classList.add('active');
+		document.body.classList.add('modal-open');
+	}
+
+	function closeCertModal() {
+		certModal.classList.remove('active');
+		document.body.classList.remove('modal-open');
+	}
+
+	document.querySelectorAll('.certificate-item').forEach(function (item) {
+		item.addEventListener('click', function () {
+			const img = item.querySelector('img');
+			if (img) {
+				openCertModal(img.src);
+			}
+		});
+	});
+
+	certModalClose.addEventListener('click', closeCertModal);
+
+	certModal.addEventListener('click', function (e) {
+		if (e.target === certModal) {
+			closeCertModal();
+		}
+	});
+
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape' && certModal.classList.contains('active')) {
+			closeCertModal();
+		}
+	});
+}
