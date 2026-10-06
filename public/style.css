@@ -106,7 +106,8 @@ body.dark-mode .about-icon,
 body.dark-mode .experience-icon,
 body.dark-mode .education-icon,
 body.dark-mode .skills-icon,
-body.dark-mode .certification-icon {
+body.dark-mode .certification-icon,
+body.dark-mode .interest-icon {
 	filter: brightness(0) invert(1);
 }
 
@@ -374,7 +375,7 @@ input:checked + .slider .ph-moon {
 .skill-header {
 	display: flex;
 	align-items: center;
-	margin: 0;
+	margin: 0 10px;
 	line-height: 1.7;
 	gap: 420px;
 	margin-left: auto;
@@ -1026,15 +1027,9 @@ body.modal-open {
 }
 
 /* Contact */
-
-.interest {
-	margin-top: 10px;
-}
-
 .contact {
 	font-family: 'Inter', sans-serif;
 	margin-top: 10px;
-
 }
 
 .contact-container {
@@ -1169,7 +1164,7 @@ body.dark-mode .social-links a:hover {
 	font-size: 13px;
 	font-weight: 400;
 	color: #252525;
-	margin-top: 1px;	
+	margin-top: 1px;
 }
 
 /* RESPONSIVE */
@@ -1191,7 +1186,7 @@ body.dark-mode .social-links a:hover {
 
 .interest {
 	font-family: 'Inter', sans-serif;
-	
+	margin-top: 10px;
 }
 
 .interest-container {
@@ -1202,6 +1197,62 @@ body.dark-mode .social-links a:hover {
 	width: 285px;
 	min-height: 260px;
 }
+.interest-header {
+	margin: 0 10px;
+}
+
+.interest-header h1 {
+	font-size: 19px;
+	font-weight: 700;
+}
+
+.interest-header p {
+	font-size: 13px;
+	margin: 0 0 30px;
+	
+}
+
+.interest-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	margin-bottom: -1px;
+	filter: brightness(0) opacity(0.6);
+}
+
+.interest-slider {
+	
+}
+
+
+
+.slide-track {
+	display: grid;
+	grid-template-columns: repeat(3, 35%);
+}
+.slide {
+	width: 90px;
+	height: 64px;
+	overflow: hidden;
+	margin-bottom: 8px;
+	
+}
+
+.slide-track .slide img {
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+
+
+
+
+
+
 
 /* Footer */
 
