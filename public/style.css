@@ -1209,7 +1209,6 @@ body.dark-mode .social-links a:hover {
 .interest-header p {
 	font-size: 13px;
 	margin: 0 0 30px;
-	
 }
 
 .interest-icon {
@@ -1221,10 +1220,7 @@ body.dark-mode .social-links a:hover {
 }
 
 .interest-slider {
-	
 }
-
-
 
 .slide-track {
 	display: grid;
@@ -1235,7 +1231,6 @@ body.dark-mode .social-links a:hover {
 	height: 64px;
 	overflow: hidden;
 	margin-bottom: 8px;
-	
 }
 
 .slide-track .slide img {
@@ -1247,12 +1242,48 @@ body.dark-mode .social-links a:hover {
 	display: block;
 }
 
+/* github */
 
+.github-repository {
+	font-family: 'Inter', sans-serif;
+	margin-top: 20px;
+	margin-left: 320px;
+	
+	
+}
 
+.github-container {
+	
+	border: 1px solid #ebe4e465;
+	width: 890px;
+	box-sizing: border-box;
+	border: none;
+}
 
+.github-header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between; 
+	gap: 640px;
+	padding-left: 50px;	
+}
 
+.github-container h2 {
+	font-size: 19px;
+	font-weight: 500;
+	color: #888888;
+}
 
+.github-container a {
+	text-decoration: none;
+	margin-right: auto;
+	color: #888888;
+}
 
+body.dark-mode .github-container h2,
+body.dark-mode .github-container a {
+	color: #888888;
+}
 
 /* Footer */
 
