@@ -58,5 +58,4 @@ if (certModal) {
 	});
 }
 
-// github repository 
 
