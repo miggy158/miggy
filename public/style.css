@@ -1219,8 +1219,7 @@ body.dark-mode .social-links a:hover {
 	filter: brightness(0) opacity(0.6);
 }
 
-.interest-slider {
-}
+
 
 .slide-track {
 	display: grid;
@@ -1244,46 +1243,119 @@ body.dark-mode .social-links a:hover {
 
 /* github */
 
+/* github */
+
+/* github */
+
 .github-repository {
-	font-family: 'Inter', sans-serif;
-	margin-top: 20px;
-	margin-left: 320px;
-	
-	
+  width: 100%;
+  max-width: 890px;
+  margin: 40px 0 0 320px;
+  font-family: 'Inter', sans-serif;
+  --dot: #111;
+  --dot-empty: #cfcfcf;
+  --muted: #8a8a8a;
+}
+
+body.dark-mode .github-repository {
+  --dot: #f2f2f2;
+  --dot-empty: #3a3a3a;
+  --muted: #888;
 }
 
 .github-container {
-	
-	border: 1px solid #ebe4e465;
-	width: 890px;
-	box-sizing: border-box;
-	border: none;
+  max-width: 850px;
+  margin: 0 auto;
+  border: none;
 }
 
+/* header: "github" left, "@miggy158 ↗" right */
 .github-header {
-	display: flex;
-	align-items: baseline;
-	justify-content: space-between; 
-	gap: 640px;
-	padding-left: 50px;	
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
-.github-container h2 {
-	font-size: 19px;
-	font-weight: 500;
-	color: #888888;
+.github-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: lowercase;
 }
 
-.github-container a {
-	text-decoration: none;
-	margin-right: auto;
-	color: #888888;
+.github-header a {
+  margin: 0;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-body.dark-mode .github-container h2,
-body.dark-mode .github-container a {
-	color: #888888;
+.github-header a::after {
+  content: ' ↗';
 }
+
+.github-header a:hover {
+  color: var(--dot);
+}
+
+/* reset the library's box */
+.github-container .calendar {
+  overflow-x: auto;
+}
+
+.github-container .calendar,
+.github-container .calendar * {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* hide EVERYTHING in the calendar except the table (skip link, stats, streaks, legend) */
+.github-container .calendar *:not(table):not(table *):not(:has(table)) {
+  display: none !important;
+}
+
+/* hide the table's own labels (months, weekdays) */
+.github-container .calendar caption,
+.github-container .calendar thead,
+.github-container .calendar td.ContributionCalendar-label,
+.github-container .calendar tool-tip,
+.github-container .calendar .sr-only {
+  display: none !important;
+}
+
+/* each cell becomes a centered dot sized by activity */
+.github-container .calendar td.ContributionCalendar-day {
+  position: relative;
+  width: 12px;
+  height: 14px;
+  padding: 0;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.github-container .calendar td.ContributionCalendar-day::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--dot) !important;
+  transform: translate(-50%, -50%);
+}
+
+.github-container .calendar td[data-level='0']::after { width: 2px;  height: 2px;  background: var(--dot-empty) !important; }
+.github-container .calendar td[data-level='1']::after { width: 4px;  height: 4px; }
+.github-container .calendar td[data-level='2']::after { width: 6px;  height: 6px; }
+.github-container .calendar td[data-level='3']::after { width: 8px;  height: 8px; }
+.github-container .calendar td[data-level='4']::after { width: 11px; height: 11px; }
 
 /* Footer */
 
