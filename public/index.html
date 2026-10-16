@@ -6,6 +6,10 @@
 		<title>Miguel Jadraque</title>
 		<link rel="stylesheet" href="style.css" />
 		<link href="../src/assets/images/miguel.webp" rel="icon" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+		/>
 		<script src="https://unpkg.com/@phosphor-icons/web"></script>
 	</head>
 	<body>
@@ -38,7 +42,7 @@
 				<div class="hero-actions">
 					<a
 						class="btn-action"
-						href="https://docs.google.com/document/d/1PhONB4SETouTyHwyXna-a-Xc3l250SkS/edit"
+						href="https://drive.google.com/file/d/1bd3sNaB5awX7uQL5N86WPlAAJMm-XfHr/view?usp=drive_link"
 					>
 						<i class="ph-light ph-file-text"></i>
 						View my CV
@@ -212,19 +216,19 @@
 								<div class="slide-track">
 									<div class="slide">
 										<img
-											src="../src/assets/images/chess.jpg"
+											src="../src/assets/images/hanni1.jpg"
 											alt="Playing chess"
 										/>
 									</div>
 									<div class="slide">
 										<img
-											src="../src/assets/images/watching.jpg"
+											src="../src/assets/images/hanni2.jpg"
 											alt="Watching anime"
 										/>
 									</div>
 									<div class="slide">
 										<img
-											src="../src/assets/images/music.jpg"
+											src="../src/assets/images/hanni3.jpg"
 											alt="Listening to music"
 										/>
 									</div>
@@ -253,10 +257,10 @@
 							</div>
 
 							<div class="content">
-								<h2>Frontend Development</h2>
+								<h2>On-the-Job Training (OJT)</h2>
 								<p>
-									Developed responsive websites using<br />HTML5,
-									CSS3, and JavaScript.
+									SYSTEMS PLUS COMPUTER COLLEGE (ITS)
+									
 								</p>
 							</div>
 						</div>
@@ -281,10 +285,9 @@
 							</div>
 
 							<div class="content">
-								<h2>Programming</h2>
+								<h2>Management Information<br>System (MIS)</h2>
 								<p>
-									Built C programs focusing on
-									<br />problem-solving and programming logic.
+									UNIVERSITY OF CALOOCAN CITY
 								</p>
 							</div>
 						</div>
@@ -451,7 +454,41 @@
 					<h2>github</h2>
 					<a href="https://github.com/miggy158">@miggy158</a>
 				</div>
+				<div class="calendar"></div>
 			</div>
+
+			<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+			<script>
+				if (
+					typeof GitHubCalendar === 'function' &&
+					document.querySelector('.calendar')
+				) {
+					GitHubCalendar('.calendar', 'miggy158', {
+						responsive: true,
+						tooltips: false,
+						global_stats: false,
+					});
+
+					// Clicking any contribution dot opens the GitHub profile.
+					const githubProfile = 'https://github.com/miggy158';
+
+					document
+						.querySelector('.calendar')
+						.addEventListener('click', function (event) {
+							const day = event.target.closest(
+								'td.ContributionCalendar-day',
+							);
+
+							if (day) {
+								window.open(
+									githubProfile,
+									'_blank',
+									'noopener',
+								);
+							}
+						});
+				}
+			</script>
 		</section>
 
 		<script src="script.js"></script>
