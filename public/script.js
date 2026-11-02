@@ -58,4 +58,28 @@ if (certModal) {
 	});
 }
 
+// Experience timeline interactivity
+const experienceLists = document.querySelectorAll('.experience-list');
+
+if (experienceLists.length > 0) {
+	experienceLists.forEach((list) => {
+		const timeline = list.querySelector('.timeline');
+		const box = list.querySelector('.box');
+
+		function activate() {
+			experienceLists.forEach((item) => item.classList.remove('is-active'));
+			list.classList.add('is-active');
+		}
+
+		if (timeline) {
+			timeline.addEventListener('click', activate);
+			timeline.addEventListener('mouseenter', activate);
+		}
+		if (box) {
+			box.addEventListener('click', activate);
+			box.addEventListener('mouseenter', activate);
+		}
+		list.addEventListener('focusin', activate);
+	});
+}
 
